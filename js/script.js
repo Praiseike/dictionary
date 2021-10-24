@@ -12,14 +12,26 @@ const onload = () =>{
             word = document.querySelector(".custom-input").value        
             if (word == "")
                 alert("please type in  a word to search");
-        
-            let url = URL_API+word;
-            console.log(url);
-            fetch(url,option={method:"get",mode:"no-cors"})
-                .then((res) => {
-                    return res.json();
-                })
-                .then( data => console.log(data[0]['word']))    
+            else{
+
+                
+
+                let url = URL_API+word;
+
+                console.log(url);
+
+                fetch(url)
+                .then(response => {
+                    // handle the response
+                    return response.json()
+                    }).then(data => console.log(data[0]))
+    
+                // fetch(url,option={method:"get",mode:"no-cors"})
+                //     .then((res) => {
+                //         return res.json();
+                //     })
+                //     .then( data => console.log(data[0]['word']))    
+            }
                 
         }
     });
