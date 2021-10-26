@@ -1,13 +1,9 @@
 .custom-input{
     font-size: 21px;
     padding-left: 20px;
-    color: #f3f3f3;
+    color: rgb(36, 36, 36);
 }
 
-.fa-search{
-    color: #f3f3f3;
-    cursor: pointer;
-}
 
 .form-group{
     position:relative;
